@@ -2,7 +2,7 @@ import math  # Modulo para usar função Square Root
 import os  # Para "Pausar" quando o programa for finalizado.
 
 # Introdução da Calculadora
-print('Bem vindo a calculadora básica 2.0 by Alexandre Beck')
+print('Bem Vindo a Calculadora Básica')
 print('Primeiro digite o tipo de operação, Usando os números indicados!')
 print('1 - Operações Básicas(Multiplicação, Divisão, Adição, Subtração)\n2 - Potenciação\n3 - Raíz Quadrada')
 
