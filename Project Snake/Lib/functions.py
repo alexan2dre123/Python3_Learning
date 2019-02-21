@@ -1,5 +1,5 @@
 import keyboard
-from time import *
+from time import sleep
 
 TECLA_A = 'a'
 TECLA_S = 's'
