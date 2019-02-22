@@ -6,6 +6,8 @@ TECLA_S = 's'
 TECLA_D = 'd'
 TECLA_W = 'w'
 
+ALTURA = 20
+LARGURA = 60
 
 class obj(object):
     def __init__(self, x, y, value):
@@ -23,30 +25,30 @@ class obj(object):
             self.y -= 1
 
 def mapa(jogador, fruta):
-    print("-"*20)
-    for i in range(0,20):
-        for j in range(0,20):
+    print("-"*ALTURA*3)
+    for i in range(0,ALTURA):
+        for j in range(0,LARGURA):
             if (j == 0):
-                print("|")
-            if (jogador.x == i and jogador.y == j):
+                print("|", end = "")
+            if (jogador.x == j and jogador.y == i):
                 print(jogador.value, end = "")
-            elif (fruta.x == i and fruta.y == j):
+            elif (fruta.x == j and fruta.y == i):
                 print(fruta.value, end = "")
             else:
                 print (' ', end = "")
-            if (j == 19):
+            if (j == LARGURA-1):
                 print("|")
-        print (' ')
-    print("-"*20)            
+
+    print("-"*ALTURA*3)
 
 def keyboard_setup(jogador):
     if (keyboard.is_pressed("d")):
         jogador.movePlayer("d")
     elif (keyboard.is_pressed("s")):
-        print("s")
+        jogador.movePlayer("s")
     elif (keyboard.is_pressed("a")):
-        print("a")
+        jogador.movePlayer("a")
     elif (keyboard.is_pressed("w")):
-        print("w")
+        jogador.movePlayer("w")
     else:
         pass
