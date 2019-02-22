@@ -22,6 +22,23 @@ class obj(object):
         elif (tecla==TECLA_W):
             self.y -= 1
 
+def mapa(jogador, fruta):
+    print("-"*20)
+    for i in range(0,20):
+        for j in range(0,20):
+            if (j == 0):
+                print("|")
+            if (jogador.x == i and jogador.y == j):
+                print(jogador.value, end = "")
+            elif (fruta.x == i and fruta.y == j):
+                print(fruta.value, end = "")
+            else:
+                print (' ', end = "")
+            if (j == 19):
+                print("|")
+        print (' ')
+    print("-"*20)            
+
 def keyboard_setup(jogador):
     if (keyboard.is_pressed("d")):
         jogador.movePlayer("d")
